@@ -1,0 +1,19 @@
+apply plugin: 'com.android.library'
+apply from: '../commons.gradle'
+
+android {
+    defaultConfig {
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+}
+
+dependencies {
+    implementation project(Modules.common)
+
+    api AndroidLibraries.room
+    api AndroidLibraries.roomKtx
+    kapt AndroidLibraries.roomCompiler
+
+    implementation Libraries.gson
+}

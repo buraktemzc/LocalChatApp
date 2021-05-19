@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="soft_gray">#42576b</color>
+    <color name="black">#000000</color>
+    <color name="white">#FFFFFF</color>
+    <color name="yellow">#FFD700</color>
+    <color name="green">#36896E</color>
+    <color name="light_gray">#C9DEF2</color>
+    <color name="right_text_background">#69869C</color>
+    <color name="left_text_background">#6082B6</color>
+    <color name="date_text_color">#E9DEF2</color>
+</resources>

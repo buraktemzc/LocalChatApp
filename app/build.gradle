@@ -1,0 +1,18 @@
+apply plugin: 'com.android.application'
+apply from: '../commons.gradle'
+
+android {
+    defaultConfig {
+        applicationId ApplicationId.id
+    }
+}
+
+dependencies {
+    implementation project(Modules.data)
+    implementation project(Modules.domain)
+    implementation project(Modules.presentation)
+
+    implementation AndroidLibraries.appCompat
+    implementation AndroidLibraries.materialDesign
+    implementation AndroidLibraries.constraintLayout
+}

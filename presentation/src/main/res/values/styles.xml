@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="ChatBubbleStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginBottom">@dimen/text_margin</item>
+        <item name="android:maxWidth">@dimen/bubble_max_width</item>
+        <item name="android:paddingStart">@dimen/bubble_text_left_padding</item>
+        <item name="android:paddingEnd">@dimen/bubble_text_right_padding</item>
+        <item name="android:paddingTop">@dimen/bubble_text_top_padding</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">16dp</item>
+    </style>
+</resources>

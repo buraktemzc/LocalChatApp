@@ -1,0 +1,27 @@
+apply plugin: 'com.android.library'
+apply from: '../commons.gradle'
+
+android {
+    defaultConfig {
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+}
+
+dependencies {
+    implementation project(Modules.domain)
+    implementation project(Modules.common)
+
+    implementation AndroidLibraries.fragmentKtx
+    implementation AndroidLibraries.constraintLayout
+    implementation AndroidLibraries.appCompat
+    implementation AndroidLibraries.recyclerView
+    implementation AndroidLibraries.materialDesign
+
+    implementation AndroidLibraries.lifecycleViewModel
+    implementation AndroidLibraries.lifecycleLivedata
+    implementation AndroidLibraries.lifecycleCommon
+
+    implementation Libraries.glide
+    kapt Libraries.glideCompiler
+}

@@ -1,0 +1,41 @@
+apply plugin: 'com.android.library'
+apply from: '../commons.gradle'
+
+android {
+    defaultConfig {
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles 'consumer-rules.pro'
+
+        Properties properties = new Properties()
+        if (project.rootProject.file('local.properties').canRead())
+            properties.load(new FileInputStream(project.rootProject.file('local.properties')))
+        else throw new GradleException("Could not read local.properties!")
+
+        buildConfigField("String", "BASE_URL", properties["BASE_URL"])
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    implementation project(Modules.domain)
+    implementation project(Modules.common)
+
+    implementation Libraries.retrofit
+    api Libraries.retrofitGSONConverter
+    api Libraries.httpLoggingInterceptor
+    implementation Libraries.okhttp
+
+    implementation AndroidLibraries.lifecycleViewModel
+    implementation AndroidLibraries.lifecycleLivedata
+    implementation AndroidLibraries.lifecycleCommon
+
+    implementation Libraries.gson
+
+    api AndroidLibraries.room
+    api AndroidLibraries.roomKtx
+    kapt AndroidLibraries.roomCompiler
+
+    implementation TestLibraries.mockWebServer
+    implementation TestLibraries.truth
+}

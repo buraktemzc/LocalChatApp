@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="card_padding">16dp</dimen>
+    <dimen name="text_margin">8dp</dimen>
+    <dimen name="bubble_text_top_padding">8dp</dimen>
+    <dimen name="bubble_text_left_padding">12dp</dimen>
+    <dimen name="bubble_text_right_padding">12dp</dimen>
+    <dimen name="bubble_max_width">260dp</dimen>
+</resources>

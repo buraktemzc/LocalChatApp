@@ -1,0 +1,11 @@
+<resources>
+    <string name="nickname_hint">Enter your nickname</string>
+    <string name="login">Login</string>
+    <string name="leave">Leave</string>
+    <string name="send">Send</string>
+    <string name="message_hint">Type your text</string>
+    <string name="session_cleared">Your session is cleared. Please login again!</string>
+
+    <string name="error_nickname_length">Your nicname length must be longer than 2 characters!</string>
+    <string name="error_internet_connection">Please check your internet connection for database synchronization!</string>
+</resources>
